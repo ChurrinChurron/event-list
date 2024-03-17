@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Event from '../components/Event.astro';
+---
+
+<Layout title="Events List">
+	<main class="grid place-content-center min-h-screen mx-6 my-12 md:my-0">
+
+		<h2 class="font-merri text-2xl mb-2">Events</h2>
+
+		<Event fecha="Today"
+				hora="17:00"
+				titulo="Bergen International Film Festival"
+				descripcion="Films from all over the world gather all film enthusiasts for unique moments at the Bergen International Film Festival."
+				bg="bg-indigo-100"
+				/>
+
+		<Event fecha="22 - 31 Oct"
+				hora="10:00"
+				titulo="Wool week"
+				descripcion="ULLVEKA 2021 will be held for the eighth time in the period 22 - 31 October 2021, and will take place in the entire Bergen region."
+				bg="bg-purple-100"/>
+		
+		<Event fecha="22 - 31 Oct"
+				hora="19:00"
+				titulo="Light park at Bergenhus Fortress"
+				descripcion="LUMAGICA - a magical experience for young and old at Bergenhus Fortress, 12 November to 19 December 2021."
+				bg="bg-red-100"/>
+		
+		<Event fecha="13 - 31 Dec"
+				hora="10:00"
+				titulo="Gingerbread City 2021"
+				descripcion="The world's largest Gingerbread Town can be found in the Xhibition shopping center, right in the center of Bergen"
+				bg="bg-green-100"/>
+	</main>
+</Layout>

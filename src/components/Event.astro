@@ -1,0 +1,25 @@
+---
+interface Props {
+	fecha: string;
+	hora: string;
+	titulo: string;
+	descripcion: string;
+	bg: string
+}
+
+const { fecha, hora, titulo, descripcion, bg } = Astro.props;
+---
+
+<div class="p-4 my-2 rounded-xl flex flex-col justify-center transition duration-200 max-w-4xl bg-white hover:shadow-lg sm:flex-row">
+	<div class=`p-2 rounded-lg text-center ${bg} sm:w-48 sm:flex sm:flex-col sm:justify-center`>
+		<h4 class="font-mulish text-sm uppercase">{fecha}</h4>
+		<h4 class="font-merri text-xl">{hora}</h4>
+	</div>
+	<div class="py-4 sm:px-6">
+		<h2 class="text-center font-merri text-md sm:text-left sm:text-lg">{titulo}</h2>
+		<p>{descripcion}</p>
+	</div>
+	<div class="mx-auto sm:w-72 sm:mt-4">
+		<button class="text-center p-2 rounded-lg transition duration-200 hover:bg-black hover:text-white"><i class="fa-solid fa-plus text-gray-500 mr-1"></i> Add to calendar</button>
+	</div>
+</div>
